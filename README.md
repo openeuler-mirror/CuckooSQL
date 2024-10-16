@@ -28,11 +28,11 @@
 #### 使用说明
     具体使用步骤和开源Spark SQL保持一致  
 
+#### 性能验证
+    在鲲鹏920 1 server + 3 slaves 服务器集群上，使用TPC-H 3TB数据量验证，性能提升如下：
+![输入图片说明](image.png)
+
 #### 备注
 1.  目前只支持parquet数据格式  
 2.  可查看执行计划中算子已替换为CuckooSQL算子，如Filter->LucaFilter  
 3.  如果SQL语句中有不支持的算子或者表达式等，则fallback到原生算子 
-
-#### 备注
-    在鲲鹏920 1 server + 3 slaves 服务器集群上，使用TPC-H 3TB数据量验证，性能提升如下：
-![输入图片说明](image.png)
