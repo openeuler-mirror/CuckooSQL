@@ -1,10 +1,9 @@
 # CuckooSQL
-
-#### 介绍
-一种C++实现的Spark SQL Native引擎解决方案，基于Spark提供的Extension功能插件式实现无需侵入修改代码。使用Apache Arrow列式内存布局实现向量化，动态代码生成和静态编译组合并结合LLVM动态优化生成代码，提升Spark SQL的性能。
+#### 介绍  
+一种C++实现的Spark SQL Native引擎解决方案，基于Spark提供的Extension功能插件式实现无需侵入修改代码。使用Apache Arrow列式内存布局实现向量化，动态代码生成和静态编译组合并结合LLVM动态优化生成代码，提升Spark SQL的性能。  
 
 #### 软件版本
-目前支持spark：3.1.1  
+    目前支持spark：3.1.1  
 
 #### 安装步骤
 
@@ -26,7 +25,11 @@
     `spark.kal.luca.shuffle.enableCompress true` 
 
 #### 使用说明
-具体使用步骤和开源Spark SQL保持一致  
+    具体使用步骤和开源Spark SQL保持一致  
+
+#### 性能验证
+    在鲲鹏920 1 server + 3 slaves 服务器集群上，使用TPC-H 3TB数据量验证，性能提升如下：
+![输入图片说明](image.png)
 
 #### 备注
 1.  目前只支持parquet数据格式  
